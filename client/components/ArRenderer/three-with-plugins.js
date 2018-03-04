@@ -1,4 +1,4 @@
-import * as THREE from 'THREE';
+import * as THREE from 'three';
 
 // THREE.OrbitControls = require( 'imports-loader?THREE!exports-loader?THREE.OrbitControls!../node_modules\/three\/examples\/js\/controls\/OrbitControls' );
 
