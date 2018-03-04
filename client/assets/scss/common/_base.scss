@@ -1,0 +1,51 @@
+// 巻き上げ順
+@include mediaL () { _: 0; }
+@include mediaLM() { _: 0; }
+@include mediaM () { _: 0; }
+@include mediaMS() { _: 0; }
+@include mediaS () { _: 0; }
+
+// ::-webkit-selection { color: #fff; background: rgba( #f7882f, .7 ); }
+// ::-moz-selection    { color: #fff; background: rgba( #f7882f, .7 ); }
+// ::selection         { color: #fff; background: rgba( #f7882f, .7 ); }
+
+html{
+  color: #2f353d;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+      -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+}
+
+@media ( -webkit-min-device-pixel-ratio: 2 ), ( min-resolution: 2dppx ) {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+body{
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+}
+
+/*
+   ========================================================================== */
+.-onlySmallScreen{
+  display: none;
+  @include mediaS () {
+  display: block;
+    @at-root br#{&}{
+      display: inline;
+    }
+  }
+}
+.-ignoreSmallScreen{
+  @include mediaS () {
+    display: none;
+  }
+}

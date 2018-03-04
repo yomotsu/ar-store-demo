@@ -1,0 +1,190 @@
+/*
+---
+name: Icon
+category:
+  - Icons
+tag:
+  - icon
+---
+
+up
+```html
+<span class="Icon -up"></span>
+```
+
+right
+```html
+<span class="Icon -right"></span>
+```
+
+down
+```html
+<span class="Icon -down"></span>
+```
+
+left
+```html
+<span class="Icon -left"></span>
+```
+
+close
+```html
+<span class="Icon -close"></span>
+```
+
+pen
+```html
+<span class="Icon -pen"></span>
+```
+
+template
+```html
+<span class="Icon -template"></span>
+```
+
+fabric
+```html
+<span class="Icon -fabric"></span>
+```
+
+text
+```html
+<span class="Icon -text"></span>
+```
+
+clipart
+```html
+<span class="Icon -clipart"></span>
+```
+
+image
+```html
+<span class="Icon -image"></span>
+```
+
+reset
+```html
+<span class="Icon -reset"></span>
+```
+
+zoomin
+```html
+<span class="Icon -zoomin"></span>
+```
+
+zoomout
+```html
+<span class="Icon -zoomout"></span>
+```
+
+undo
+```html
+<span class="Icon -undo"></span>
+```
+
+redo
+```html
+<span class="Icon -redo"></span>
+```
+
+cart
+```html
+<span class="Icon -cart"></span>
+```
+
+save
+```html
+<span class="Icon -save"></span>
+```
+
+share
+```html
+<span class="Icon -share"></span>
+```
+*/
+@import "./icon-vars";
+
+@font-face {
+	font-family: "Icon";
+	src:
+		url( "/assets/fonts/Icon.woff2" ) format( "woff2" ),
+		url( "/assets/fonts/Icon.woff" ) format( "woff" ),
+		url( "/assets/fonts/Icon.ttf" ) format( "truetype" );
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="Icon"],
+[class*=" Icon"] {
+	font-family: "Icon";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	vertical-align: middle;
+	display: inline-block;
+
+	/* For With CJK Text =========== */
+	position: relative;
+	top: -0.1em;
+}
+
+.Icon.-up:before {
+	content: unquote("\"\e601\"");
+}
+.Icon.-right:before {
+	content: unquote("\"\e602\"");
+}
+.Icon.-down:before {
+	content: unquote("\"\e603\"");
+}
+.Icon.-left:before {
+	content: unquote("\"\e604\"");
+}
+.Icon.-close:before {
+	content: unquote("\"\e605\"");
+}
+.Icon.-pen:before {
+	content: unquote("\"\e610\"");
+}
+.Icon.-template:before {
+	content: unquote("\"\e611\"");
+}
+.Icon.-fabric:before {
+	content: unquote("\"\e612\"");
+}
+.Icon.-text:before {
+	content: unquote("\"\e620\"");
+}
+.Icon.-clipart:before {
+	content: unquote("\"\e621\"");
+}
+.Icon.-image:before {
+	content: unquote("\"\e622\"");
+}
+.Icon.-reset:before {
+	content: unquote("\"\e623\"");
+}
+.Icon.-zoomin:before {
+	content: unquote("\"\e630\"");
+}
+.Icon.-zoomout:before {
+	content: unquote("\"\e631\"");
+}
+.Icon.-undo:before {
+	content: unquote("\"\e632\"");
+}
+.Icon.-redo:before {
+	content: unquote("\"\e633\"");
+}
+.Icon.-cart:before {
+	content: unquote("\"\e700\"");
+}
+.Icon.-save:before {
+	content: unquote("\"\e701\"");
+}
+.Icon.-share:before {
+	content: unquote("\"\e702\"");
+}

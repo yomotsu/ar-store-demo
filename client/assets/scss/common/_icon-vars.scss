@@ -1,0 +1,44 @@
+$icons: (
+	up: unquote("\"\e601\""),
+	right: unquote("\"\e602\""),
+	down: unquote("\"\e603\""),
+	left: unquote("\"\e604\""),
+	close: unquote("\"\e605\""),
+	pen: unquote("\"\e610\""),
+	template: unquote("\"\e611\""),
+	fabric: unquote("\"\e612\""),
+	text: unquote("\"\e620\""),
+	clipart: unquote("\"\e621\""),
+	image: unquote("\"\e622\""),
+	reset: unquote("\"\e623\""),
+	zoomin: unquote("\"\e630\""),
+	zoomout: unquote("\"\e631\""),
+	undo: unquote("\"\e632\""),
+	redo: unquote("\"\e633\""),
+	cart: unquote("\"\e700\""),
+	save: unquote("\"\e701\""),
+	share: unquote("\"\e702\""),
+);
+
+@function getValue ( $assoc, $key ) {
+	@each $pair in $assoc {
+		@if nth( $pair, 1 ) == $key {
+			@return nth( $pair, 2 );
+		}
+	}
+@return null;
+}
+
+@mixin icon ( $name ) {
+	content: getValue( $icons, $name );
+	font-family: "Icon";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	vertical-align: middle;
+	display: inline-block;
+}
+

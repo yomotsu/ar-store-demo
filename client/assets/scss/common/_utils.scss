@@ -1,0 +1,47 @@
+@mixin mediaL () {
+	@media ( min-width: $breakpoint-middle + 1px ) {
+		@content;
+	}
+}
+
+@mixin mediaLM () {
+	@media ( min-width: $breakpoint-small + 1px ) {
+		@content;
+	}
+}
+
+@mixin mediaM () {
+	@media ( max-width: $breakpoint-middle ) and ( min-width: $breakpoint-small + 1px ) {
+		@content;
+	}
+}
+
+@mixin mediaMS () {
+	@media ( max-width: $breakpoint-middle ) {
+		@content;
+	}
+}
+
+@mixin mediaS () {
+	@media ( max-width: $breakpoint-small ) {
+		@content;
+	}
+}
+
+@mixin wordbreak () {
+  white-space: normal;
+  word-break: break-word;
+  word-break: break-all;
+  hyphens: auto;
+}
+
+@mixin noSelect () {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+@mixin noButtonSelect () {
+  user-select: none;
+  -webkit-touch-callout: none;
+}

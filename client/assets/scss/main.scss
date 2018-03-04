@@ -1,0 +1,20 @@
+@import "~normalize.css/normalize";
+@import "./common/vars";
+@import "./common/utils";
+@import "./common/base";
+// @import "./common/icon";
+
+// html.-preventSelect{
+// 	&, & *{
+// 		@include noSelect();
+// 	}
+// }
+
+// body{
+// 	background-image: url( "./img/bg_pc.jpg" );
+// 	background-size: cover;
+// 	background-attachment: fixed;
+// 	@include mediaS{
+// 		background-image: url( "./img/bg_sp.jpg" );
+// 	}
+// }
