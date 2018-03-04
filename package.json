@@ -7,6 +7,10 @@
     "generate": "nuxt generate",
     "heroku-postbuild": "npm run build"
   },
+  "engines": {
+    "node": "v8.9.4",
+    "npm": "5.6.0"
+  },
   "dependencies": {
     "lodash": "^4.17.5",
     "normalize.css": "^8.0.0",
