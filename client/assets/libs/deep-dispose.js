@@ -1,6 +1,6 @@
-function deepDispose( object3D ) {
+export default function deepDispose( object3D ) {
 
-	object3D.traverse( object3D => dipose( object3D ) );
+	object3D.traverse( object3D => dispose( object3D ) );
 
 }
 
@@ -19,7 +19,7 @@ function dispose( object3D ) {
 
 	} else if ( !! object3D.material ) {
 
-		disposeMaterial( material );
+		disposeMaterial( object3D.material );
 
 	}
 

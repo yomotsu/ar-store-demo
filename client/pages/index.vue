@@ -1,25 +1,26 @@
 <template>
-	<div id="page">
-		<product-list
-			:products="products"
-		></product-list>
+	<div>
+		<page-header></page-header>
 		<hero></hero>
-		<h1>Home Page</h1>
+		<template v-for="category in products">
+			<product-list :products="category"></product-list>
+		</template>
+		<page-footer></page-footer>
 	</div>
 </template>
 
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex';
-import Hero from '../components/Hero.vue';
-import ProductList from '../components/ProductList/index.vue';
+import PageHeader from '~/components/PageHeader/index.vue';
+import PageFooter from '~/components/PageFooter/index.vue';
+import Hero from '~/components/Hero/index.vue';
+import ProductList from '~/components/ProductList/index.vue';
 
 export default {
 	name: 'Home',
   head () {
 		return {
-			// title: this.$route.params.slug || 'all',
 			title: 'Home',
-			// titleTemplate: 'Nuxt TodoMVC : %s todos'
 		};
 	},
 	computed: Object.assign(
@@ -30,6 +31,8 @@ export default {
 		{},
 	),
 	components: {
+		PageHeader,
+		PageFooter,
 		Hero,
 		ProductList,
 	}
@@ -37,12 +40,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "~assets/scss/common/_vars.scss";
-@import "~assets/scss/common/_utils.scss";
-h1{
-	font-style: normal;
-	@include mediaMS(){
-		font-size: 10px;
-	}
-}
+// @import "~assets/scss/common/_vars.scss";
+// @import "~assets/scss/common/_utils.scss";
+// h1{
+// 	font-style: normal;
+// 	@include mediaMS(){
+// 		font-size: 10px;
+// 	}
+// }
 </style>

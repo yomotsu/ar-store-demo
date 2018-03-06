@@ -1,10 +1,14 @@
 <template>
-	<div>
-		{{product}}
+	<div class="ArViewer">
 		<ar-renderer
 			:src="product.object3d"
 		>
 		</ar-renderer>
+		<div class="ArViewer__Back">
+			<router-link :to="`/product/${ $route.params.id }/`">
+				Back
+			</router-link>
+		</div>
 	</div>
 </template>
 
@@ -20,11 +24,11 @@ export default {
 			title: this.product.name || 'all',
 		};
 	},
-	validate ( { params, query, store } ) {
+	// validate ( { params, query, store } ) {
 
-		return findIndex( store.state.products, { id: params.id } ) !== - 1;
+	// 	return findIndex( store.state.products, { id: params.id } ) !== - 1;
 
-	},
+	// },
 	computed: Object.assign(
 		mapState( [
 			'products',
@@ -33,7 +37,22 @@ export default {
 		{
 			product() {
 
-				return find( this.products, { id: this.$route.params.id } );
+				let product;
+
+				this.products.some( ( category ) => {
+
+					const found = find( category.data, { id: this.$route.params.id } )
+
+					if ( !! found ) {
+
+						product = found;
+						return true;
+
+					}
+
+				} );
+
+				return product;
 
 			},
 		},
@@ -47,4 +66,19 @@ export default {
 <style scoped lang="scss">
 @import "~assets/scss/common/_vars.scss";
 @import "~assets/scss/common/_utils.scss";
+.ArViewer{
+	position: relative;
+}
+.ArViewer__Back{
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	margin: auto;
+	a{
+		@include button();
+	}
+}
+
 </style>

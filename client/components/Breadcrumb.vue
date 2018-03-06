@@ -27,4 +27,15 @@ export default {
 <style scoped lang="scss">
 @import "~assets/scss/common/_vars.scss";
 @import "~assets/scss/common/_utils.scss";
+.Breadcrumb{
+	font-size: 12px;
+	padding: 0 5px;
+	a, span{
+		color: inherit;
+		text-decoration: none;
+		font-weight: bold;
+		display: inline-block;
+		padding: 8px 6px;
+	}
+}
 </style>

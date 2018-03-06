@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "scripts": {
-    "dev": "nuxt",
+    "dev": "HOST=0.0.0.0 PORT=8000 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -12,6 +12,7 @@
     "npm": "5.6.0"
   },
   "dependencies": {
+    "es6-tween": "^5.1.0",
     "lodash": "^4.17.5",
     "normalize.css": "^8.0.0",
     "nuxt": "^1.4.0",

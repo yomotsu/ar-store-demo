@@ -3,9 +3,9 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _c08299f0 = () => import('../client/pages/product/_id/index.vue' /* webpackChunkName: "pages/product/_id/index" */).then(m => m.default || m)
-const _0dcf2464 = () => import('../client/pages/product/_id/ar-viewer.vue' /* webpackChunkName: "pages/product/_id/ar-viewer" */).then(m => m.default || m)
-const _d7128286 = () => import('../client/pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
+const _f8fa4d14 = () => import('../client/pages/product/_id/index.vue' /* webpackChunkName: "pages/product/_id/index" */).then(m => m.default || m)
+const _e5c3385c = () => import('../client/pages/product/_id/ar-viewer.vue' /* webpackChunkName: "pages/product/_id/ar-viewer" */).then(m => m.default || m)
+const _7042cbaa = () => import('../client/pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 
 
@@ -67,17 +67,17 @@ export function createRouter () {
     routes: [
 		{
 			path: "/product/:id?",
-			component: _c08299f0,
+			component: _f8fa4d14,
 			name: "product-id"
 		},
 		{
 			path: "/product/:id?/ar-viewer",
-			component: _0dcf2464,
+			component: _e5c3385c,
 			name: "product-id-ar-viewer"
 		},
 		{
 			path: "/",
-			component: _d7128286,
+			component: _7042cbaa,
 			name: "index"
 		}
     ],

@@ -11,7 +11,10 @@
 			class="ProductTile__Inner"
 		>
 			<div class="ProductTile__Image">
-				<img :src="product.imgSrc" alt="">
+				<img :src="product.imgSrcThumb" alt="">
+				<div class="ProductTile__State" v-if="isSoldOut( product )">
+					Sold Out
+				</div>
 			</div>
 			<div class="ProductTile__Name">
 				{{ product.name }}
@@ -54,18 +57,37 @@ export default {
 	}
 }
 	.ProductTile__Image{
+		position: relative;
 		margin-bottom: 5px;
+		background: #182c44;
 		img{
 			display: block;
 			width: 100%;
 			height: auto;
+			.-soldOut &{
+				opacity: 0.4;
+			}
 		}
 	}
+		.ProductTile__State{
+			color: #c00;
+			font-size: 14px;
+			font-weight: bold;
+			// -webkit-text-stroke: 1px #fff;
+			line-height: 1.2;
+			position: absolute;
+			bottom: 3px;
+			right: 5px;
+			padding: 1px 2px;
+			background: rgba( #fff, 0.8 );
+		}
 	.ProductTile__Name{
 		text-align: center;
 	}
 	.ProductTile__Price{
 		font-size: 12px;
+		font-family: "Gidole", sans-serif;
+		font-weight: bold;
 		text-align: center;
 	}
 	.-soldOut .ProductTile__Price{

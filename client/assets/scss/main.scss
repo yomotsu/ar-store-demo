@@ -2,6 +2,18 @@
 @import "./common/vars";
 @import "./common/utils";
 @import "./common/base";
+
+@import url( "https://fonts.googleapis.com/css?family=BenchNine:400,700" );
+
+@font-face {
+  font-family: "Gidole";
+  src:
+    url( "/fonts/Gidole-Regular.woff" ) format( "woff" );
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 // @import "./common/icon";
 
 // html.-preventSelect{

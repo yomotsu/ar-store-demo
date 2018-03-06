@@ -45,3 +45,26 @@
   user-select: none;
   -webkit-touch-callout: none;
 }
+
+@mixin button{
+	$height: 60px;
+	color: #3F4958;
+	line-height: $height;
+	text-decoration: none;
+	text-align: center;
+	box-sizing: border-box;
+	display: block;
+	width: 200px;
+	height: $height;
+	border: 1px solid currentColor;
+	margin: auto;
+	background: rgba( #fff, 0.3 );
+}
+
+@mixin logoFont{
+	font-family: "BenchNine", sans-serif;
+}
+
+@mixin priceFont{
+	font-family: "Gidole", sans-serif;
+}
